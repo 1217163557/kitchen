@@ -79,11 +79,8 @@
       recently = #{recently,jdbcType=DATE}
     where Mid = #{mid,jdbcType=BIGINT}
   </update>
-  <select id="selectAll" resultType="BaseResultMap">
-    SELECT
-    *
-    FROM
-    t_menstruation
+  <select id="selectAll22" parameterType="java.util.Map"  resultType="BaseResultMap">
+    select * from t_menstruation t order by t.`Mid` limit #{index},#{limit}
 
   </select>
 

@@ -1,6 +1,8 @@
 package com.qfedu.dao;
 
 import com.qfedu.entity.t_menstruation;
+import org.apache.ibatis.annotations.ResultType;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;
@@ -17,9 +19,11 @@ public interface t_menstruationMapper {
     int updateByPrimaryKeySelective(t_menstruation record);
 
     int updateByPrimaryKey(t_menstruation record);
-
+    @Select("select * from t_menstruation t order by t.`Mid` limit #{index},#{limit} ")
+    @ResultType(t_menstruation.class)
     List<t_menstruation> selectAll(Map<String,Object> param);
-
+    @Select("select count(*) from t_menstruation")
+    @ResultType(int.class)
     int selectCount();
 
 }
