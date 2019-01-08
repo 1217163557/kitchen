@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+@CrossOrigin
 public class MenstrualController {
 
-    @Autowired
+    @Autowired(required = true)
     private MenstruationService menstruationService;
+
 
     @GetMapping("/menstruation.do")
     public PageBeanVo<t_menstruation> all(int page, int limit) {

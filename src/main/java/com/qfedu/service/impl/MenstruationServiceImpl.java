@@ -13,7 +13,7 @@ import java.util.Map;
 @Service
 public class MenstruationServiceImpl implements MenstruationService {
 
-    @Autowired
+    @Autowired(required = true)
     private t_menstruationMapper menstruationdao;
     @Override
     public PageBeanVo<t_menstruation> queryPage(int page, int limit) {

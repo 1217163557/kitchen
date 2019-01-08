@@ -97,4 +97,3 @@ ON a.m_id = b.m_parent
 WHERE b.m_flag=0 AND a.m_type = 0 limit #{index},#{limit}
   </select>
 </mapper>
-</mapper>
