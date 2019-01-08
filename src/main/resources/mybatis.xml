@@ -12,7 +12,7 @@
 	<typeAliases> 
 	<!-- type 包名+类型，alias 指定别名 -->
 	
-		<typeAlias type="com.qfedu.admin.entity.Admin" alias="Admin"/>
+		<typeAlias type="com.qfedu.entity.t_menstruation" alias="tmenstruation"/>
 
 	</typeAliases>
 	
