@@ -19,7 +19,7 @@ public class MenstrualController {
     @Autowired(required = true)
     private MenstruationService menstruationService;
 
-    @ApiOperation(notes = "实现传递参数，响应指定数量的数据",tags = {"名次"},value = "获取名次接口")
+    @ApiOperation(notes = "实现传递参数，响应指定数量的数据",tags = {"起止行","每页数量"},value = "获取名次接口")
     @GetMapping("/menstruation.do")
     public PageBeanVo<t_menstruation> all(@ApiParam(value = "起止行")int page,@ApiParam(value = "每页数量") int limit) {
         return menstruationService.queryPage(page, limit);
